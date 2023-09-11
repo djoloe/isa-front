@@ -1,0 +1,103 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+
+ul[role = 'list'],
+ol[role='list']{
+    list-style: none;
+}
+
+html:focus-within{
+    scroll-behavior: smooth;
+}
+
+body,
+html{
+    height: 80vh;
+    
+}
+
+body{
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    text-align: center;
+}
+
+::placeholder {
+    text-align: center; 
+ }
+
+
+a:not([class]){
+    text-decoration-skip-ink: auto;
+}
+
+img,
+picture,svg{
+    max-width: 100%;
+    display: block;
+}
+
+.main-box{
+    margin: 10rem auto auto auto;
+    width: 20rem;
+}
+
+.svg-box{
+    height: 10rem;
+    width: 10rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+}
+
+.flex-box-1{
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.flex-box-2{
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.flex-box-3{
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+
+input{
+    height: 2rem;
+    border-radius: 0.5rem;
+}
+
+input:focus-visible {
+    outline: 3px solid #9999FF;
+}
+
+.register{
+    margin-left: 2rem;
+    height: 2.5rem;
+    width: 10rem;
+    border-radius: 1rem;
+}
+
+.register:hover{
+    background-color: #9999FF;
+}
+
+.register:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+
+

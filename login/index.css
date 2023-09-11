@@ -1,0 +1,86 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+ul[role = 'list'],
+ol[role='list']{
+    list-style: none;
+}
+
+html:focus-within{
+    scroll-behavior: smooth;
+}
+
+body,
+html{
+    height: 80vh;
+    
+}
+
+body{
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+::placeholder {
+    text-align: center; 
+ }
+
+
+a:not([class]){
+    text-decoration-skip-ink: auto;
+}
+
+img,
+picture,svg{
+    max-width: 100%;
+    display: block;
+}
+
+.grid-box{
+    margin: 20vh auto;
+    display: grid;
+    justify-content: center;
+}
+
+input{
+    height: 2rem;
+    border-radius: 0.5rem;
+}
+
+input:focus-visible {
+    outline: 3px solid #9999FF;
+}
+
+.dont-have{
+    text-align:center;
+    margin-top: 1rem;
+}
+
+.svg-box{
+    width: 15rem;
+    height: 15rem;
+    margin-bottom: 2rem;
+}
+
+.login-button{
+    height: 2rem;
+    border-radius: 0.5rem;
+}
+
+.login-button:hover{
+    background-color: #9999FF;
+}
+
+.login-button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
