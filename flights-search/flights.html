@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <link rel="stylesheet" href="flights.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="main">
+        <div class="top">
+            <button id="flights-button">Flights</button>
+            <button id="sign-in-button">Sign In</button>
+        </div>
+        <div class="drop-menu-box">
+            <select id="stops" class="drop-menu">
+                <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2+">2+</option>
+            </select>
+            <select id="adults" class="drop-menu">
+                <option value="1">1 adult</option>
+              <option value="2">2 adults</option>
+              <option value="3">3 adults</option>
+              <option value="4">4 adults</option>
+              <option value="5">5 adults</option>
+              <option value="6">6 adults</option>
+              <option value="7">7 adults</option>
+            </select>
+            <select id="class-trip" class="drop-menu">
+                <option value="Economy">Economy</option>
+              <option value="Business">Business</option>
+              <option value="Mixed">Mixed</option>
+            </select>
+        </div>
+        <div class="select-flight-date">
+            <div class="from-to">
+                <input type="text" placeholder="From" id="fromFlight" required>
+                <input type="text" placeholder="To" id="toFlight" required>
+            </div>
+                <div class="depart-return">
+                    <div>
+                        <span>Depart:</span>
+                        <input type="date" id="depart-date">
+                    </div>
+                    <div>
+                        <span>Return:</span>
+                        <input type="date" id="return-date">
+                    </div>
+                </div>
+        </div>
+        <button class="search-flight-button" id="search-flight-button">
+            Search flights
+        </button>
+    </div>
+    <script src="flights.js"></script>
+</body>
+</html>

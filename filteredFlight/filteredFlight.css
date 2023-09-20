@@ -1,0 +1,107 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+ul[role = 'list'],
+ol[role='list']{
+    list-style: none;
+}
+
+html:focus-within{
+    scroll-behavior: smooth;
+}
+
+body,
+html{
+    height: 70vh;
+}
+
+body{
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    text-align: center;
+    background-color: antiquewhite;
+}
+
+a:not([class]){
+    text-decoration-skip-ink: auto;
+}
+
+img,
+picture,svg{
+    max-width: 100%;
+    display: block;
+    width: 20rem;
+    height: 20rem;
+}
+
+.main{
+    max-width: 140vh;
+    height: 50vh;
+    margin: 10vh auto 0 auto;
+}
+
+.div-top{
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.show-avio-company{
+    width: 20rem;
+    height: 3rem;
+    border: 1px solid black;
+    border-radius: 1rem;
+}
+
+
+.show-avio-company:hover{
+    background-color: #9999FF;
+}
+
+.show-avio-company:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+.about-company{
+    display: flex;
+    gap: 10rem;
+    margin: 5rem auto;
+    max-width: 80vh;
+}
+
+.content {
+    max-width: 40vh;
+    margin-top: 3rem;
+}
+
+.name-adress{
+    margin-bottom: 1rem;
+}
+
+.destination-promo{
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.promo{
+    margin-bottom: 1rem;
+}
+
+ul{
+    list-style: none;
+}
+
+li{
+    margin-top: 0.5rem;
+}
+

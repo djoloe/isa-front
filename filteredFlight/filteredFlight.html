@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="filteredFlight.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="main">
+        <div class="div-top">
+            <div class="depart-box">
+                <span>Depart date:</span>
+                <h2 id="depart"></h2>
+            </div>
+            <div class="return-box">
+                <span>Return date:</span>
+                <h2 id="return"></h2>
+            </div>
+            <div class="stops">
+                <span>Stops:</span>
+                <h2 id="stops"></h2>
+            </div>
+            <div class="time-travel-box">
+                <span>Time travel:</span>
+                <h2 id="time-travel"></h2>
+            </div>
+            <div class="class-box">
+                <span>Class cabin:</span>
+                <h2 id="class-trip"></h2>
+            </div>
+            <div class="fromPlace-box">
+                <span>Depart City:</span>
+                <h2 id="depart-city"></h2>
+            </div>
+            <div class="toPlace-box">
+                <span>Destination: </span>
+                <h2 id="destination"></h2>
+            </div>
+            <div class="adults-box">
+                <span>Adults:</span>
+                <h2 id="adults"></h2>
+            </div>
+            <div class="price-box">
+                <span>Price:</span>
+                <h2 id="price"></h2>
+            </div>
+        </div>
+        <div class="div-bottom">
+            <button class="show-avio-company" id="aircompany-button">About company</button>
+        </div>
+        <div id="about-company" class="about-company">
+            <div class="avio-picture" id="avio-picture-id">
+            </div>
+            <div class="content">
+                <div class="name-adress">
+                    <h1 id="aviocompany-name"></h1>
+                    <h3 id="aviocompany-adress"></h3>
+                </div>
+                <div class="promo">
+                    <p id="aviocompany-promo"></p>
+                </div>
+                <div class="destinations">
+                    <span class="destination-promo" id="destination-promo"></span>
+                    <ul class="ul-list" id="destinations-ul">
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="filteredFlight.js"></script>
+</body>
+</html>

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
     <link rel="stylesheet" href="register.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 <body>
     <form>
@@ -13,18 +14,18 @@
                 <img src="/svg/airplane-svgrepo-com.svg" alt="">
             </div>
                 <div class="flex-box-1">
-                    <input type="text" placeholder="Username" required>
-                    <input type="text" placeholder="First name" required>
+                    <input type="email" placeholder="Email" id="email" required>
+                    <input type="text" placeholder="First name" id="firstName" required>
                 </div>
                 <div class="flex-box-2">
-                    <input type="password" placeholder="Password" required>
-                    <input type="text" placeholder="Last name" required>
+                    <input type="password" placeholder="Password" id="password" required>
+                    <input type="text" placeholder="Last name" id="lastName" required>
                 </div>
                 <div class="flex-box-3">
-                    <input type="password" placeholder="Password repeat" required>
-                    <input type="text" placeholder="Address" required>
+                    <input type="password" placeholder="Password repeat" id="passwordRepeat" required>
+                    <input type="text" placeholder="Address" id="adress" required>
                 </div>
-                <button class="register" id="register">Register</button>
+                <input type="submit" class="register" id="register"></button>
         </div>
     </form>
     <script src="register.js"></script>
