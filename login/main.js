@@ -1,5 +1,5 @@
 
-
+//test branch
 const button = document.getElementById('login-button');
 const form = document.getElementById('form-id');
 const aRef = document.getElementById('dont-have');
@@ -34,7 +34,6 @@ button.addEventListener('click', (e) => {
             alert('Wrong username or password!');
         } else {
              window.location.href = 'http://127.0.0.1:5500/flights-search/flights.html';
-            
         }
     })
     .catch((response) => {
