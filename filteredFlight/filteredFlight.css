@@ -43,7 +43,7 @@ picture,svg{
 }
 
 .main{
-    max-width: 140vh;
+    max-width: 150vh;
     height: 50vh;
     margin: 10vh auto 0 auto;
 }
@@ -105,3 +105,19 @@ li{
     margin-top: 0.5rem;
 }
 
+.choose-seats{
+    border-radius: 1rem;
+    width: 5rem;
+    height: 3rem;
+    margin-top: 0.5rem;
+}
+
+.choose-seats:hover{
+    background-color: #9999FF;
+}
+
+.choose-seats:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }

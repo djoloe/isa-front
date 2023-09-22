@@ -1,0 +1,127 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+ul[role = 'list'],
+ol[role='list']{
+    list-style: none;
+}
+
+html:focus-within{
+    scroll-behavior: smooth;
+}
+
+body,
+html{
+    height: 70vh;
+}
+
+body{
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    text-align: center;
+    background-color: antiquewhite;
+}
+
+a:not([class]){
+    text-decoration-skip-ink: auto;
+}
+
+img,
+picture,svg{
+    max-width: 100%;
+    display: block;
+}
+
+.main{
+    max-width: 60vh;
+    margin: 20vh auto 0 auto;
+}
+
+.single-gap-row{
+    display: flex;
+    flex-direction: row;
+}
+
+.choose-h1{
+    margin-bottom: 2rem;
+}
+
+.main-row{
+    display: flex;
+    gap: 3rem;
+}
+
+.single-div{
+    border: 1px solid black;
+    width: 2rem;
+    height: 2rem;
+}
+
+.free{
+    display: flex;
+    gap: 1rem;
+}
+
+.taken{
+    display: flex;
+    gap: 1rem;
+}
+
+.purple{
+    display: flex;
+    gap: 1rem;
+}
+
+.middle{
+    display: flex;
+    gap: 10vh;
+}
+
+.color-div{
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 1px solid black;
+    margin-bottom: 1rem;
+}
+
+.white{
+    background-color: antiquewhite;
+}
+
+.gray{
+    background-color: gray;
+}
+
+.purple{
+    background-color: purple;
+}
+
+.yellow{
+    background-color: yellow;
+}
+
+.reserve-button{
+    margin-top: 2rem;
+    width: 10rem;
+    height: 2rem;
+    border-radius: 1rem;
+    margin-right: 2rem;
+}
+
+.reserve-button:hover{
+    background-color: #9999FF;
+}
+
+.reserve-button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }

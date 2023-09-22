@@ -7,7 +7,7 @@ const departDate = document.getElementById('depart-date');
 const returnDate = document.getElementById('return-date');
 const searchButton = document.getElementById('search-flight-button');
 
-searchButton.addEventListener('submit', (e) => {
+searchButton.addEventListener('click', (e) => {
     e.preventDefault();
 
     const data = {

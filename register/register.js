@@ -6,7 +6,7 @@ const lastName = document.getElementById('lastName');
 const passwordRepeat = document.getElementById('passwordRepeat');
 const adress = document.getElementById('adress');
 
-button.addEventListener('submit' , (e) => {
+button.addEventListener('click' , (e) => {
     e.preventDefault();
 
     const data = {

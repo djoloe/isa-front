@@ -17,6 +17,7 @@ const aviocompanyPromo = document.getElementById('aviocompany-promo');
 const destinationList = document.getElementById('destinations-ul');
 const destinationPromo = document.getElementById('destination-promo');
 const mainContentAvio = document.getElementById('about-company');
+const chooseSeatButton = document.getElementById('choose-seats');
 
 let click = 0;
 
@@ -34,6 +35,7 @@ window.addEventListener('load', () => {
        destination.innerHTML = objectFromLocal[i].toPlace;
        adults.innerHTML = adultsStorage;
        price.innerHTML = calculatePrice(adultsStorage,objectFromLocal[i].price);
+       chooseSeatButton.setAttribute('id', objectFromLocal[i].idAvioCompany);
     }
 })
 
@@ -132,4 +134,21 @@ function deleteContent(){
     aviocompanyPromo.innerHTML = '';
     destinationList.innerHTML = '';
     destinationPromo.innerHTML = '';
+}
+
+chooseSeatButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    const id = chooseSeatButton.id;
+    chooseLocalStorage(id);
+    window.location.href = 'http://127.0.0.1:5500/choose-seat/chooseSeat.html';
+})
+
+
+function chooseLocalStorage(id){
+    const data = JSON.parse(localStorage.getItem(200));
+    for(let i = 0; i <data.length; i++){
+        if(data[i].idAvioCompany === Number(id)){
+            localStorage.setItem(201,JSON.stringify(data[i]));
+        }
+    }
 }
