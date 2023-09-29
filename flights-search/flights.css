@@ -1,111 +1,111 @@
 *,
 *::before,
-*::after{
-    box-sizing: border-box;
+*::after {
+  box-sizing: border-box;
 }
 
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-ul[role = 'list'],
-ol[role='list']{
-    list-style: none;
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
 }
 
-html:focus-within{
-    scroll-behavior: smooth;
+html:focus-within {
+  scroll-behavior: smooth;
 }
 
 body,
-html{
-    height: 70vh;
+html {
+  height: 70vh;
 }
 
-body{
-    text-rendering: optimizeSpeed;
-    line-height: 1.5;
-    text-align: center;
-    background-color: antiquewhite;
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  text-align: center;
+  background-color: antiquewhite;
 }
 
-a:not([class]){
-    text-decoration-skip-ink: auto;
+a:not([class]) {
+  text-decoration-skip-ink: auto;
 }
 
 img,
-picture,svg{
-    max-width: 100%;
-    display: block;
+picture,
+svg {
+  max-width: 100%;
+  display: block;
 }
 
-input{
-    height: 2rem;
-    border-radius: 0.5rem;
-    text-align: center;
+input {
+  height: 2rem;
+  border-radius: 0.5rem;
+  text-align: center;
 }
 
-.drop-menu{
-    height: 2rem;
-    border-radius: 0.5rem;
+.drop-menu {
+  height: 2rem;
+  border-radius: 0.5rem;
 }
 
-button{
-    height: 2rem;
-    border-radius: 0.5rem;
-    width: 5rem;
+button {
+  height: 2rem;
+  border-radius: 0.5rem;
+  width: 5rem;
 }
 
-button:hover{
-    background-color: #9999FF;
+button:hover {
+  background-color: #9999ff;
 }
 
 button:active {
-    background-color: #3e8e41;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
-  }
-
-
-.main{
-    background-color: lightblue;
-    width: 50vh;
-    height: 40vh;
-    margin: 20vh auto 0 auto;
-    padding: 3rem;
-    border-radius: 1rem;
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 
-.top{
-    display: flex;
-    justify-content: space-between;
+.main {
+  background-color: lightblue;
+  width: 50vh;
+  height: 40vh;
+  margin: 20vh auto 0 auto;
+  padding: 3rem;
+  border-radius: 1rem;
 }
 
-.drop-menu{
-    margin-right: 1rem;
-    margin-top: 1rem;
+.top {
+  display: flex;
+  justify-content: space-between;
 }
 
-.select-flight-date{
-    margin-top: 1rem;
+.drop-menu {
+  margin-right: 1rem;
+  margin-top: 1rem;
 }
 
-.from-to{
-    display: flex;
-    gap: 2rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    margin-left: 1rem;
+.select-flight-date {
+  margin-top: 1rem;
 }
 
-.depart-return{
-    display: flex;
-    gap: 2rem;
-    margin-left: 1rem;
-    margin-bottom: 1rem;
+.from-to {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
 }
 
-.search-flight-button{
-    width: 10rem;
+.depart-return {
+  display: flex;
+  gap: 2rem;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+.search-flight-button {
+  width: 10rem;
 }

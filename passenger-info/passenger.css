@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 ul[role="list"],
 ol[role="list"] {
   list-style: none;
@@ -15,17 +20,14 @@ html:focus-within {
 
 body,
 html {
-  height: 80vh;
+  height: 70vh;
 }
 
 body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   text-align: center;
-}
-
-::placeholder {
-  text-align: center;
+  background-color: antiquewhite;
 }
 
 a:not([class]) {
@@ -39,59 +41,55 @@ svg {
   display: block;
 }
 
-.main-box {
-  margin: 10rem auto auto auto;
-  width: 20rem;
+input {
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  text-align: center;
 }
 
-.svg-box {
-  height: 10rem;
-  width: 10rem;
-  margin-left: auto;
-  margin-right: auto;
+.main {
+  max-width: 50vh;
+  margin: 20vh auto 0 auto;
+}
+
+.flex-up {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.flex-down {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
   margin-bottom: 2rem;
 }
 
-.flex-box-1 {
-  display: flex;
-  gap: 2rem;
-  margin-bottom: 1rem;
+.buttons {
+  padding-right: 2rem;
 }
 
-.flex-box-2 {
-  display: flex;
-  gap: 2rem;
-  margin-bottom: 1rem;
-}
-
-.flex-box-3 {
-  display: flex;
-  gap: 2rem;
-  margin-bottom: 1rem;
-}
-
-input {
-  height: 2rem;
-  border-radius: 0.5rem;
-}
-
-input:focus-visible {
-  outline: 3px solid #9999ff;
-}
-
-.register {
+button {
   margin-left: 2rem;
   height: 2.5rem;
   width: 10rem;
   border-radius: 1rem;
 }
 
-.register:hover {
+button:hover {
   background-color: #9999ff;
 }
 
-.register:active {
+button:active {
   background-color: #3e8e41;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
+}
+
+.table-your-friends {
+  background-color: red;
+  width: 10rem;
+  height: 10rem;
 }

@@ -1,0 +1,80 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body,
+html {
+  height: 70vh;
+}
+
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  text-align: center;
+  background-color: antiquewhite;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+  width: 20rem;
+  height: 20rem;
+}
+
+.main {
+  max-width: 150vh;
+  height: 50vh;
+  margin: 5vh auto 0 auto;
+}
+
+.div-top {
+  display: flex;
+  gap: 3rem;
+  margin-bottom: 3rem;
+  margin-left: 6rem;
+}
+
+table,
+th,
+td {
+  width: 40%;
+  border: 1px solid black;
+  margin: auto;
+  margin-top: 2rem;
+}
+
+.search-flex-box {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+}
+
+.friend-list {
+  max-width: 30vh;
+  background-color: red;
+  margin: 5rem auto 0 auto;
+  width: 5rem;
+  height: 5rem;
+}
