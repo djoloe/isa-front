@@ -1,169 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
-    <link rel="stylesheet" href="chooseSeat.css">
-</head>
-<body>
+    <link rel="stylesheet" href="chooseSeat.css" />
+  </head>
+  <body>
     <div class="main">
-        <div class="choose-h1">
-            <h1>Choose your seat</h1>
-        </div>
-        <div class="middle">
-            <div class="left" id="left">
-                <div class="main-row">
-                    <p>1</p>
-                    <div class="single-gap-row">
-                        <div class="single-div" id="1-1">1</div>
-                        <div class="single-div" id="1-2">2</div>
-                        <div class="single-div" id="1-3">3</div>
-                    </div>
-                    <div class="single-gap-row">
-                        <div class="single-div" id="1-4">4</div>
-                        <div class="single-div" id="1-5">5</div>
-                        <div class="single-div" id="1-6">6</div>
-                    </div>
-                    <div class="single-gap-row">
-                        <div class="single-div" id="1-7">7</div>
-                        <div class="single-div" id="1-8">8</div>
-                        <div class="single-div" id="1-9">9</div>
-                    </div>
-                </div>
-                <div class="main-row">
-                    <p>2</p>
-                    <div class="single-gap-row">
-                        <div class="single-div" id="2-1">1</div>
-                        <div class="single-div" id="2-2">2</div>
-                        <div class="single-div" id="2-3">3</div>
-                    </div>
-                    <div class="single-gap-row">
-                        <div class="single-div" id="2-4">4</div>
-                        <div class="single-div" id="2-5">5</div>
-                        <div class="single-div" id="2-6">6</div>
-                    </div>
-                    <div class="single-gap-row">
-                        <div class="single-div" id="2-7">7</div>
-                        <div class="single-div" id="2-8">8</div>
-                        <div class="single-div" id="2-9">9</div>
-                    </div>
-                </div>
-                <div class="main-row">
-                    <p>3</p>
-                    <div class="single-gap-row">
-                        <div class="single-div" id="3-1">1</div>
-                        <div class="single-div" id="3-2">2</div>
-                        <div class="single-div" id="3-3">3</div>
-                    </div>
-                    <div class="single-gap-row">
-                        <div class="single-div" id="3-4">4</div>
-                        <div class="single-div" id="3-5">5</div>
-                        <div class="single-div" id="3-6">6</div>
-                    </div>
-                    <div class="single-gap-row">
-                        <div class="single-div" id="3-7">7</div>
-                        <div class="single-div" id="3-8">8</div>
-                        <div class="single-div" id="3-9">9</div>
-                    </div>
-                </div>
-                <div class="main-row">
-                    <p>4</p>
-                    <div class="single-gap-row">
-                        <div class="single-div" id="4-1">1</div>
-                        <div class="single-div" id="4-2">2</div>
-                        <div class="single-div" id="4-3">3</div>
-                    </div>
-                    <div class="single-gap-row">
-                        <div class="single-div" id="4-4">4</div>
-                        <div class="single-div" id="4-5">5</div>
-                        <div class="single-div" id="4-6">6</div>
-                    </div>
-                    <div class="single-gap-row">
-                        <div class="single-div" id="4-7">7</div>
-                        <div class="single-div" id="4-8">8</div>
-                        <div class="single-div" id="4-9">9</div>
-                    </div>
-                </div>
-                <div class="main-row">
-                    <p>5</p>
-                    <div class="single-gap-row">
-                        <div class="single-div" id="5-1">1</div>
-                        <div class="single-div" id="5-2">2</div>
-                        <div class="single-div" id="5-3">3</div>
-                    </div>
-                    <div class="single-gap-row">
-                        <div class="single-div" id="5-4">4</div>
-                        <div class="single-div" id="5-5">5</div>
-                        <div class="single-div" id="5-6">6</div>
-                    </div>
-                    <div class="single-gap-row">
-                        <div class="single-div" id="5-7">7</div>
-                        <div class="single-div" id="5-8">8</div>
-                        <div class="single-div" id="5-9">9</div>
-                    </div>
-                </div>
-                <div class="main-row">
-                    <p>6</p>
-                    <div class="single-gap-row">
-                        <div class="single-div" id="6-1">1</div>
-                        <div class="single-div" id="6-2">2</div>
-                        <div class="single-div" id="6-3">3</div>
-                    </div>
-                    <div class="single-gap-row">
-                        <div class="single-div" id="6-4">4</div>
-                        <div class="single-div" id="5-6">5</div>
-                        <div class="single-div" id="6-6">6</div>
-                    </div>
-                    <div class="single-gap-row">
-                        <div class="single-div" id="6-7">7</div>
-                        <div class="single-div" id="6-8">8</div>
-                        <div class="single-div" id="6-9">9</div>
-                    </div>
-                </div>
-                <div class="main-row">
-                    <p>7</p>
-                    <div class="single-gap-row">
-                        <div class="single-div" id="7-1">1</div>
-                        <div class="single-div" id="7-2">2</div>
-                        <div class="single-div" id="7-3">3</div>
-                    </div>
-                    <div class="single-gap-row">
-                        <div class="single-div" id="7-4">4</div>
-                        <div class="single-div" id="7-5">5</div>
-                        <div class="single-div" id="7-6">6</div>
-                    </div>
-                    <div class="single-gap-row">
-                        <div class="single-div" id="7-7">7</div>
-                        <div class="single-div" id="7-8">8</div>
-                        <div class="single-div" id="7-9">9</div>
-                    </div>
-                </div>
+      <div class="choose-h1">
+        <h1>Choose your seat</h1>
+      </div>
+      <div class="middle">
+        <div class="left" id="left">
+          <div class="main-row">
+            <p>1</p>
+            <div class="single-gap-row">
+              <div class="single-div" id="1-1">1</div>
+              <div class="single-div" id="1-2">2</div>
+              <div class="single-div" id="1-3">3</div>
             </div>
-            <div class="right">
-                <div class="free">
-                    <div class="white color-div"></div>
-                    <h4>Free</h4>
-                </div>
-                <div class="taken">
-                    <div class="gray color-div"></div>
-                    <h4>Taken</h4>
-                </div>
-                <div class="taken">
-                    <div class="purple color-div"></div>
-                    <h4>Selected</h4>
-                </div>
-                <div class="taken">
-                    <div class="yellow color-div"></div>
-                    <h4>Reserved</h4>
-                </div>
+            <div class="single-gap-row">
+              <div class="single-div" id="1-4">4</div>
+              <div class="single-div" id="1-5">5</div>
+              <div class="single-div" id="1-6">6</div>
             </div>
+            <div class="single-gap-row">
+              <div class="single-div" id="1-7">7</div>
+              <div class="single-div" id="1-8">8</div>
+              <div class="single-div" id="1-9">9</div>
+            </div>
+          </div>
+          <div class="main-row">
+            <p>2</p>
+            <div class="single-gap-row">
+              <div class="single-div" id="2-1">1</div>
+              <div class="single-div" id="2-2">2</div>
+              <div class="single-div" id="2-3">3</div>
+            </div>
+            <div class="single-gap-row">
+              <div class="single-div" id="2-4">4</div>
+              <div class="single-div" id="2-5">5</div>
+              <div class="single-div" id="2-6">6</div>
+            </div>
+            <div class="single-gap-row">
+              <div class="single-div" id="2-7">7</div>
+              <div class="single-div" id="2-8">8</div>
+              <div class="single-div" id="2-9">9</div>
+            </div>
+          </div>
+          <div class="main-row">
+            <p>3</p>
+            <div class="single-gap-row">
+              <div class="single-div" id="3-1">1</div>
+              <div class="single-div" id="3-2">2</div>
+              <div class="single-div" id="3-3">3</div>
+            </div>
+            <div class="single-gap-row">
+              <div class="single-div" id="3-4">4</div>
+              <div class="single-div" id="3-5">5</div>
+              <div class="single-div" id="3-6">6</div>
+            </div>
+            <div class="single-gap-row">
+              <div class="single-div" id="3-7">7</div>
+              <div class="single-div" id="3-8">8</div>
+              <div class="single-div" id="3-9">9</div>
+            </div>
+          </div>
+          <div class="main-row">
+            <p>4</p>
+            <div class="single-gap-row">
+              <div class="single-div" id="4-1">1</div>
+              <div class="single-div" id="4-2">2</div>
+              <div class="single-div" id="4-3">3</div>
+            </div>
+            <div class="single-gap-row">
+              <div class="single-div" id="4-4">4</div>
+              <div class="single-div" id="4-5">5</div>
+              <div class="single-div" id="4-6">6</div>
+            </div>
+            <div class="single-gap-row">
+              <div class="single-div" id="4-7">7</div>
+              <div class="single-div" id="4-8">8</div>
+              <div class="single-div" id="4-9">9</div>
+            </div>
+          </div>
+          <div class="main-row">
+            <p>5</p>
+            <div class="single-gap-row">
+              <div class="single-div" id="5-1">1</div>
+              <div class="single-div" id="5-2">2</div>
+              <div class="single-div" id="5-3">3</div>
+            </div>
+            <div class="single-gap-row">
+              <div class="single-div" id="5-4">4</div>
+              <div class="single-div" id="5-5">5</div>
+              <div class="single-div" id="5-6">6</div>
+            </div>
+            <div class="single-gap-row">
+              <div class="single-div" id="5-7">7</div>
+              <div class="single-div" id="5-8">8</div>
+              <div class="single-div" id="5-9">9</div>
+            </div>
+          </div>
+          <div class="main-row">
+            <p>6</p>
+            <div class="single-gap-row">
+              <div class="single-div" id="6-1">1</div>
+              <div class="single-div" id="6-2">2</div>
+              <div class="single-div" id="6-3">3</div>
+            </div>
+            <div class="single-gap-row">
+              <div class="single-div" id="6-4">4</div>
+              <div class="single-div" id="5-6">5</div>
+              <div class="single-div" id="6-6">6</div>
+            </div>
+            <div class="single-gap-row">
+              <div class="single-div" id="6-7">7</div>
+              <div class="single-div" id="6-8">8</div>
+              <div class="single-div" id="6-9">9</div>
+            </div>
+          </div>
+          <div class="main-row">
+            <p>7</p>
+            <div class="single-gap-row">
+              <div class="single-div" id="7-1">1</div>
+              <div class="single-div" id="7-2">2</div>
+              <div class="single-div" id="7-3">3</div>
+            </div>
+            <div class="single-gap-row">
+              <div class="single-div" id="7-4">4</div>
+              <div class="single-div" id="7-5">5</div>
+              <div class="single-div" id="7-6">6</div>
+            </div>
+            <div class="single-gap-row">
+              <div class="single-div" id="7-7">7</div>
+              <div class="single-div" id="7-8">8</div>
+              <div class="single-div" id="7-9">9</div>
+            </div>
+          </div>
         </div>
-        <button id="reserve-button" class="reserve-button">Reserve</button>
-        <button id="delete-button" class="reserve-button">Remove</button>
+        <div class="right">
+          <div class="free">
+            <div class="white color-div"></div>
+            <h4>Free</h4>
+          </div>
+          <div class="taken">
+            <div class="gray color-div"></div>
+            <h4>Taken</h4>
+          </div>
+          <div class="taken">
+            <div class="purple color-div"></div>
+            <h4>Selected</h4>
+          </div>
+          <div class="taken">
+            <div class="yellow color-div"></div>
+            <h4>Reserved</h4>
+          </div>
+        </div>
+      </div>
+      <button id="reserve-button" class="reserve-button">Reserve</button>
+      <button id="delete-button" class="reserve-button">Remove</button>
     </div>
-</body>
-<script src="chooseSeat.js"></script>
+  </body>
+  <script type="module" src="chooseSeat.js"></script>
 </html>

@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
+import { checkToken } from "../module/checkToken.js";
 const passengerText = document.getElementById("passenger-count");
 const passengers = JSON.parse(localStorage.getItem("passengers"));
 const adults = Number(localStorage.getItem("adults"));
@@ -15,6 +16,7 @@ let i = 1;
 
 window.addEventListener("load", (e) => {
   e.preventDefault();
+  checkToken();
   passengerText.innerHTML = `Passengers 1 of ${passengers.length}`;
   (firstNameBox.value = passengers[0].firstName),
     (lastNameBox.value = passengers[0].lastName);

@@ -16,10 +16,12 @@ const aviocompanyPromo = document.getElementById("aviocompany-promo");
 const destinationList = document.getElementById("destinations-ul");
 const destinationPromo = document.getElementById("destination-promo");
 const chooseSeatButton = document.getElementById("choose-seats");
+import { checkToken } from "../module/checkToken.js";
 
 let click = 0;
 
 window.addEventListener("load", () => {
+  checkToken();
   const objectFromLocal = JSON.parse(localStorage.getItem(200));
   const adultsStorage = localStorage.getItem("adults");
 
@@ -78,7 +80,7 @@ buttonInfo.addEventListener("click", async (e) => {
 
 function getIdAvio(localObject) {
   let id;
-  object = JSON.parse(localObject);
+  const object = JSON.parse(localObject);
   for (let i = 0; i < object.length; i++) {
     id = object[i]["idAvioCompany"];
   }

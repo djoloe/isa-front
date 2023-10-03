@@ -23,17 +23,19 @@ button.addEventListener("click", (e) => {
     withCredentials: true,
     headers: {
       "Content-type": "application/json; charset=UTF-8",
+      Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
     },
   })
     .then((response) => {
       if (response.status === 202) {
         alert("Wrong username or password!");
       } else {
+        localStorage.setItem("accessToken", `${response.data}`);
         window.location.href =
           "http://127.0.0.1:5500/flights-search/flights.html";
       }
     })
-    .catch(() => {
-      console.log("login ->POST-> catch block");
+    .catch((err) => {
+      console.log("login ->POST-> catch block" + err);
     });
 });

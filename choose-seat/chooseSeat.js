@@ -1,4 +1,5 @@
 /* eslint-disable no-undef */
+import { checkToken } from "../module/checkToken.js";
 const reserveButton = document.getElementById("reserve-button");
 const containerClick = document.getElementById("left");
 const adults = localStorage.getItem("adults");
@@ -12,6 +13,7 @@ let idUserCookie = window.Cookies.get("id");
 
 window.addEventListener("load", async (e) => {
   e.preventDefault();
+  checkToken();
   checkFlightDiv();
 });
 

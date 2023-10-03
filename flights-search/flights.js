@@ -1,4 +1,5 @@
 /* eslint-disable no-undef */
+import { checkToken } from "../module/checkToken.js";
 const stopsBox = document.getElementById("stops");
 const adultsBox = document.getElementById("adults");
 const classTripBox = document.getElementById("class-trip");
@@ -7,6 +8,11 @@ const toValueBox = document.getElementById("toFlight");
 const departDate = document.getElementById("depart-date");
 const returnDate = document.getElementById("return-date");
 const searchButton = document.getElementById("search-flight-button");
+
+window.addEventListener("load", (e) => {
+  e.preventDefault();
+  checkToken();
+});
 
 searchButton.addEventListener("click", (e) => {
   e.preventDefault();
