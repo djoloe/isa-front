@@ -9,9 +9,7 @@ const firstNameBox = document.getElementById("first-name");
 const lastNameBox = document.getElementById("last-name");
 const emailBox = document.getElementById("email");
 const nextButton = document.getElementById("next-button");
-let idUserCookie = window.Cookies.get("id");
 let arrayFriends = [];
-let passengersNumber = 2;
 let i = 1;
 
 window.addEventListener("load", (e) => {
@@ -54,7 +52,6 @@ nextButton.addEventListener("click", () => {
 function sendData() {
   let data = {
     array: arrayFriends,
-    idUser: idUserCookie,
   };
   axios({
     method: "POST",

@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
-export function checkToken() {
-  axios({
+export async function checkToken() {
+  return axios({
     method: "post",
     url: "http://127.0.0.1:3000/checkToken",
     withCredentials: true,
@@ -13,6 +13,9 @@ export function checkToken() {
       if (response.status === 203) {
         alert(`Your session is over. Please log in again`);
         window.location.href = "http://127.0.0.1:5500/login/index.html";
+      }
+      if (response.status === 204) {
+        return "Admin";
       }
     })
     .catch((err) => {

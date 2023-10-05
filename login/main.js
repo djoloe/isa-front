@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 //test branch
 const button = document.getElementById("login-button");
@@ -16,6 +17,15 @@ button.addEventListener("click", (e) => {
     email: email.value,
     password: password.value,
   };
+
+  if (notNullData(data) === true) {
+    sentLoginData(data);
+  } else {
+    alert("empty field!");
+  }
+});
+
+function sentLoginData(data) {
   axios({
     method: "post",
     url: "http://127.0.0.1:3000/login",
@@ -38,4 +48,13 @@ button.addEventListener("click", (e) => {
     .catch((err) => {
       console.log("login ->POST-> catch block" + err);
     });
-});
+}
+
+function notNullData(data) {
+  for (const [key, value] of Object.entries(data)) {
+    if (value === "") {
+      return false;
+    }
+  }
+  return true;
+}

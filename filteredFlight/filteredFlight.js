@@ -19,9 +19,10 @@ const chooseSeatButton = document.getElementById("choose-seats");
 import { checkToken } from "../module/checkToken.js";
 
 let click = 0;
+let role;
 
-window.addEventListener("load", () => {
-  checkToken();
+window.addEventListener("load", async () => {
+  role = await checkToken();
   const objectFromLocal = JSON.parse(localStorage.getItem(200));
   const adultsStorage = localStorage.getItem("adults");
 
@@ -47,15 +48,15 @@ function calculatePrice(adults, price) {
   return stringHTML;
 }
 
-buttonInfo.addEventListener("click", async (e) => {
+buttonInfo.addEventListener("click", (e) => {
   e.preventDefault();
 
-  if (click % 2 === 0) {
+  if (click % 2 === 0 && role === "Admin") {
     const idAvio = getIdAvio(localStorage.getItem(200));
     let data = {
       id: idAvio,
     };
-    await axios({
+    axios({
       method: "post",
       url: "http://127.0.0.1:3000/companyInfo",
       data: data,
