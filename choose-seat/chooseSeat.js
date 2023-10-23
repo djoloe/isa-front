@@ -9,7 +9,6 @@ const deleteButton = document.getElementById("delete-button");
 let arrayDiv = [];
 let selectedDiv;
 let UserHaveDivs;
-let idUserCookie = window.Cookies.get("id");
 
 window.addEventListener("load", async (e) => {
   e.preventDefault();
@@ -59,21 +58,18 @@ deleteButton.addEventListener("click", () => {
   } else {
     deleteReservationForUser();
     alert("Reservations have been cancelled!");
+    location.reload();
   }
 });
 
 async function deleteReservationForUser() {
-  let data = {
-    idUser: idUserCookie,
-  };
-
   await axios({
     method: "post",
     url: "http://127.0.0.1:3000/removeReservation",
-    data: data,
     withCredentials: true,
     headers: {
       "Content-type": "application/json; charset=UTF-8",
+      Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
     },
   })
     .then((response) => {
@@ -89,7 +85,6 @@ async function deleteReservationForUser() {
 async function saveUserDiv(array) {
   let data = {
     array: array,
-    idUser: idUserCookie,
     idFlight: localStorageObjectFlight.idAvioCompany,
   };
   await axios({
@@ -99,6 +94,7 @@ async function saveUserDiv(array) {
     withCredentials: true,
     headers: {
       "Content-type": "application/json; charset=UTF-8",
+      Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
     },
   })
     .then((response) => {
@@ -128,22 +124,25 @@ async function checkFlightDiv() {
     withCredentials: true,
     headers: {
       "Content-type": "application/json; charset=UTF-8",
+      Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
     },
   })
     .then((response) => {
       colorDivs(response.data);
     })
-    .catch(() => {
-      console.log("chooseSeats.js ->POST/loadSeats -> catch block");
+    .catch((error) => {
+      console.log("chooseSeats.js ->POST/loadSeats -> catch block" + error);
     });
 }
 
-function colorDivs(divs) {
+function colorDivs(divsToken) {
+  const idUser = divsToken.idUser;
+  const divs = divsToken.divs;
   for (let i = 0; i < divs.length; i++) {
-    let parsedArray = parseArray(divs[i].seat);
-    for (let j = 0; j < parsedArray.length; j++) {
-      let div = document.getElementById(`${parsedArray[j]}`);
-      if (idUserCookie == divs[i].idUser) {
+    let parsedSeat = JSON.parse(divs[i].seat);
+    for (let j = 0; j < parsedSeat.length; j++) {
+      let div = document.getElementById(`${parsedSeat[j]}`);
+      if (idUser == divs[i].idUser) {
         arrayDiv.push(div);
         div.style.background = "yellow";
         UserHaveDivs = true;
@@ -166,10 +165,6 @@ function checkSameDiv(selectedDiv) {
     }
   }
   return exist;
-}
-
-function parseArray(divs) {
-  return JSON.parse(divs);
 }
 
 function deletedDivsColor() {

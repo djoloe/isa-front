@@ -13,9 +13,10 @@ export async function checkToken() {
       if (response.status === 203) {
         alert(`Your session is over. Please log in again`);
         window.location.href = "http://127.0.0.1:5500/login/index.html";
-      }
-      if (response.status === 204) {
+      } else if (response.status === 204) {
         return "Admin";
+      } else {
+        return "client";
       }
     })
     .catch((err) => {
